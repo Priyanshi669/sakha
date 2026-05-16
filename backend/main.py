@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 
-from app.database import Base, engine
+from app.database import Base as LegacyBase, engine as legacy_engine
 from app.routes import insights as legacy_insights
 
 from .api.routes import chat, health, memory
+from .db.sqlite import Base as CoreBase, engine as core_engine
+from .models import db_models
 
-Base.metadata.create_all(bind=engine)
+LegacyBase.metadata.create_all(bind=legacy_engine)
+CoreBase.metadata.create_all(bind=core_engine)
 
 app = FastAPI(title="Personal AI OS API")
 
