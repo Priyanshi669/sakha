@@ -1,5 +1,7 @@
 # Sakha - Personal AI OS (Phase 1)
 
+![License](https://img.shields.io/badge/license-MIT-green) ![Framework](https://img.shields.io/badge/framework-FastAPI-009688)
+
 Sakha is a local, production-minded AI assistant with persistent memory. It exposes a FastAPI backend for chat, memory storage, and retrieval, backed by Ollama for local LLM inference and ChromaDB for vector search. This repo also includes a legacy analytics module for activity insights.
 
 ## What this project does
@@ -155,4 +157,4 @@ pytest
 
 ## License
 
-Add a license if you plan to open source this repository.
+MIT License. See [LICENSE](LICENSE).
